@@ -88,7 +88,7 @@
     </section>
     <section class="section--about page-section" id="about">
         <div class="wrap">
-            <h1 class="section__title">About</h1>
+            <h1 class="section__title">About The project is called {{ site.github.project_title }}</h1>
             <div>
                 <p>FOSSASIA is the top Free and Open Source technology event in Asia for developers, start-ups, and contributors. Projects at FOSSASIA range from open hardware, to design, graphics and software. FOSSASIA was established in 2009. Previous events took place in Cambodia and Vietnam.</p>
             </div>
@@ -101,6 +101,17 @@
       </div>
     </section>
     <section class="section--about page-section" id="mentors">
+
+<ul>
+{% for member in site.data.members %}
+  <li>
+    <a href="https://github.com/{{ member.github }}">
+      {{ member.name }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
         <div class="wrap">
             <h1 class="section__title">Mentors</h1>
             <div class="stack stack-clean">
